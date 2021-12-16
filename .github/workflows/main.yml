@@ -1,0 +1,26 @@
+name: iOS csdk workflow
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build:
+    name: Build and Test plivo IOS using iPhone simulator
+    runs-on: macOS-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        continue-on-error: true
+      - name: Rename the file in s3
+        run: |
+          bash -c 'AWS_ACCESS_KEY_ID=${{secrets.AWS_ACCESS_KEY}} AWS_SECRET_ACCESS_KEY=${{secrets.AWS_SECRET_ACCESS_KEY}} aws s3 --recursive mv s3://helpers.plivo.com/ios/plivo-ios-package-2.0.zip s3://helpers.plivo.com/ios/plivo-ios-package-2.1.1.zip'
+      - name: Compress the files
+        run: |
+          zip -r /tmp/plivo-ios-package-2.0.zip /Users/runner/Library/Developer/Xcode/DerivedData/PlivoVoiceKit-gtrabcrjlzqehefvzuzbrpppdpze/Build/Products
+      - name: Upload to S3
+        run: |
+          curl "https://awscli.amazonaws.com/AWSCLIV2.pkg" -o "AWSCLIV2.pkg"
+          sudo installer -pkg ./AWSCLIV2.pkg -target /
+          bash -c 'AWS_ACCESS_KEY_ID=${{secrets.AWS_ACCESS_KEY}} AWS_SECRET_ACCESS_KEY=${{secrets.AWS_SECRET_ACCESS_KEY}} aws s3 cp /tmp/plivo-ios-package-2.0.zip s3://helpers.plivo.com/ios/plivo-ios-package-2.0.zip'
