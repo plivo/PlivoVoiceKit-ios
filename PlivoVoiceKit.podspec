@@ -1,0 +1,16 @@
+Pod::Spec.new do |s|
+  s.name         = "PlivoVoiceKit"
+  s.version      = "2.2.0"
+  s.summary      = "PlivoVoiceKit XCFramework"
+  s.description  = "PlivoVoiceKit XCFramework to integrate voice calling within your applications. Make, receive, and control calls across the world."
+  s.homepage     = "https://www.plivo.com/docs/sdk/client/ios/overview/"
+  s.license      = { :type => 'Commercial', :text => "Copyright 2011-2019 Plivo. All rights reserved. Use of this software is subject to the terms and conditions of the Plivo Terms of Service located at https://www.plivo.com/privacy/" }
+  s.authors      = { 'Plivo Inc' => 'support@plivo.com' }
+  s.source       = { :http => "https://s3.us-west-1.amazonaws.com/helpers.plivo.com/ios/PlivoVoiceKit.xcframework.zip" }
+  s.platform = :ios
+  s.swift_version = '5.1'
+  s.requires_arc = true
+  s.ios.deployment_target  = '10.0'
+  s.ios.vendored_frameworks = 'PlivoVoiceKit.xcframework'
+end
+
