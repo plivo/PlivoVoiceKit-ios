@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "PlivoVoiceKit"
-  s.version      = "2.2.0"
+  s.version      = "2.2.1"
   s.summary      = "PlivoVoiceKit XCFramework"
   s.description  = "PlivoVoiceKit XCFramework to integrate voice calling within your applications. Make, receive, and control calls across the world."
   s.homepage     = "https://www.plivo.com/docs/sdk/client/ios/overview/"
@@ -12,5 +12,6 @@ Pod::Spec.new do |s|
   s.requires_arc = true
   s.ios.deployment_target  = '10.0'
   s.ios.vendored_frameworks = 'PlivoVoiceKit.xcframework'
+  s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
 end
 
