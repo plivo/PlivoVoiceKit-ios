@@ -1,4 +1,5 @@
 {
   "2.2.1": "https://s3.us-west-1.amazonaws.com/helpers.plivo.com/ios/PlivoVoiceKit.xcframework.zip",
-  "2.2.2-beta":"https://s3.us-west-1.amazonaws.com/helpers.plivo.com/ios/PlivoVoiceKit.xcframework-2.2.2-beta.zip"
+  "2.2.2-beta":"https://s3.us-west-1.amazonaws.com/helpers.plivo.com/ios/PlivoVoiceKit.xcframework-2.2.2-beta.zip",
+  "2.2.3-beta":"https://s3.us-west-1.amazonaws.com/helpers.plivo.com/ios/PlivoVoiceKit.xcframework-2.2.3-beta.zip"
 }
