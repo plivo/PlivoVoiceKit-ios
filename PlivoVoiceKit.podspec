@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "PlivoVoiceKit"
-  s.version      = "3.0.2-beta"
+  s.version      = "3.0.3-beta"
   s.summary      = "PlivoVoiceKit XCFramework"
   s.description  = "PlivoVoiceKit XCFramework to integrate voice calling within your applications. Make, receive, and control calls across the world."
   s.homepage     = "https://github.com/plivo/Plivovoicekit"
