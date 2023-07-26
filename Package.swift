@@ -16,8 +16,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "PlivoVoiceKit",
-            url: "https://s3.us-west-1.amazonaws.com/helpers.plivo.com/ios/PlivoVoiceKit.xcframework-3.1.4-beta.zip",
-            checksum: "fc37a41563c575f9e4dd1f232c672d27d906c05fc91b08df07675500c3b265f6"
+            url: "https://s3.us-west-1.amazonaws.com/helpers.plivo.com/ios/PlivoVoiceKit.xcframework-3.1.5-beta.zip",
+            checksum: "050fcaf65183fdc497290e6f42d01787c815e6c26f8b207845e761c3a3f3997d"
         )
     ]
 )
